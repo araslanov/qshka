@@ -44,7 +44,7 @@ export class ListService {
             'Xin Zhao',
             'Rek\'sai',
             'Ornn',
-            'Quin',
+            'Quinn',
             'Renekton',
             'Shen',
             'Riven',

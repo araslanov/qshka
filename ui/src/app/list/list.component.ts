@@ -7,7 +7,7 @@ import { ListService } from './list.service';
     styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-    private championMap: Map<string, string[]> = new Map<string, string[]>();
+    private championEntries;
 
     constructor(private listService: ListService) {
     }
@@ -18,16 +18,16 @@ export class ListComponent implements OnInit {
 
     private buildChampionMap(championList: string[]) {
         championList.sort();
+        const map = new Map();
         for (const champion of championList) {
-            const firstLetter = champion.substring(0, 1);
-            const mapEntry = this.championMap.get(firstLetter);
-            if (mapEntry) {
-                mapEntry.push(champion);
+            const letter = champion.substring(0, 1);
+            if (map.has(letter)) {
+                map.get(letter).push(champion);
             } else {
-                this.championMap.set(firstLetter, [champion]);
-                this.championMap.entries();
+                map.set(letter, [champion]);
             }
         }
+        this.championEntries = map.entries();
     }
 
 }
