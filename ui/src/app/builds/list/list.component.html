@@ -1,7 +1,8 @@
 <div id="content" class="color-scheme">
     <div *ngFor="let entry of championEntries" class="tile">
         <div>{{entry[0]}}</div>
-        <div *ngFor="let champion of entry[1]">{{champion}}</div>
+        <div *ngFor="let champion of entry[1]">
+            <a routerLink="{{champion}}">{{champion}}</a>
+        </div>
     </div>
 </div>
-<!--<router-outlet></router-outlet>-->

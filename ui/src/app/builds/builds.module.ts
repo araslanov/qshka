@@ -2,16 +2,24 @@ import { NgModule } from '@angular/core';
 import { ListComponent } from './list/list.component';
 import { ListService } from './list/list.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { BuildsComponent } from './builds.component';
+import { BuildComponent } from './build/build.component';
+import { BuildsRoutingModule } from './builds-routing.module';
+import { BuildService } from './build/build.service';
 
 @NgModule({
     imports: [
-        BrowserModule
+        BrowserModule,
+        BuildsRoutingModule
     ],
     declarations: [
-        ListComponent
+        BuildsComponent,
+        ListComponent,
+        BuildComponent
     ],
     providers: [
-        ListService
+        ListService,
+        BuildService
     ]
 })
 export class BuildsModule {
