@@ -1,0 +1,55 @@
+import { Injectable } from "@angular/core";
+
+@Injectable()
+export class ListService {
+    getChampionList(): string[] {
+        return [
+            'Katarina',
+            'Malzahar',
+            'Nidalee',
+            'Jhin',
+            'Yorick',
+            'Karthus',
+            'Rengar',
+            'Akali',
+            'Veigar',
+            'Braum',
+            'Vayne',
+            'Galio',
+            'Fiora',
+            'Amumu',
+            "Kha'zix",
+            'Jayce',
+            'Zed',
+            'Annie',
+            'Lucian',
+            'Ashe',
+            'Lux',
+            'Morgana',
+            'Miss Fortune',
+            'Graves',
+            'Twitch',
+            'Soraka',
+            'Ryze',
+            'Karma',
+            'Alistar',
+            'Blitzcrank',
+            'Thresh',
+            'Xayah',
+            'Azir',
+            'Gnar',
+            'Aurelion Sol',
+            'Talon',
+            'Jarvan IV',
+            'Xin Zhao',
+            "Rek'sai",
+            'Ornn',
+            'Quin',
+            'Renekton',
+            'Shen',
+            'Riven',
+            'Tristana',
+            'Caitlyn'
+        ];
+    }
+}

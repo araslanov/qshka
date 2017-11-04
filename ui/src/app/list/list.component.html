@@ -1,0 +1,6 @@
+<div id="content" class="color-scheme">
+    <div *ngFor="let entry of championMap.entries()" class="tile">
+        <div>{{entry[0]}}</div>
+        <div *ngFor="let champion of entry[1]">{{champion}}</div>
+    </div>
+</div>
