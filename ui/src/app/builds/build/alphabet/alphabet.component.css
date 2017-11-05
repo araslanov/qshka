@@ -1,0 +1,15 @@
+.alphabet {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.letter {
+    padding: 5px;
+    cursor: default;
+    color: #888;
+}
+
+.letter:hover {
+    background-color: #222;
+    color: white;
+}

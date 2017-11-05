@@ -8,6 +8,7 @@ import { ItemsComponent } from './items/items.component';
 import { RunesComponent } from './runes/runes.component';
 import { MasteriesComponent } from './masteries/masteries.component';
 import { SummonerSpellsComponent } from './summoner-spells/summoner-spells.component';
+import { AlphabetComponent } from './alphabet/alphabet.component';
 
 @NgModule({
     imports: [
@@ -16,6 +17,7 @@ import { SummonerSpellsComponent } from './summoner-spells/summoner-spells.compo
     ],
     declarations: [
         BuildComponent,
+        AlphabetComponent,
         SkillsComponent,
         ItemsComponent,
         RunesComponent,
