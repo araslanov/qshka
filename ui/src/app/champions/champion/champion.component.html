@@ -1,0 +1,12 @@
+<app-alphabet></app-alphabet>
+<img src="../../../assets/images/champions/{{championName}}/icon.png" width="50" height="50">
+<span>{{championName}}</span>
+<div class="tabs">
+    <a routerLink="overview" routerLinkActive="active">Overview</a>
+    <a routerLink="runes" routerLinkActive="active">Runes</a>
+    <a routerLink="masteries" routerLinkActive="active">Masteries</a>
+    <a routerLink="summoner-spells" routerLinkActive="active">Summoner spells</a>
+    <a routerLink="items" routerLinkActive="active">Items</a>
+    <a routerLink="skills" routerLinkActive="active">Skills</a>
+</div>
+<router-outlet></router-outlet>

@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BuildService } from './build.service';
+import { ChampionService } from './champion.service';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-    templateUrl: './build.component.html',
-    styleUrls: [ './build.component.css' ]
+    templateUrl: './champion.component.html',
+    styleUrls: [ './champion.component.css' ]
 })
-export class BuildComponent implements OnInit {
+export class ChampionComponent implements OnInit {
     championName: string;
 
-    constructor(private route: ActivatedRoute, private buildService: BuildService) {
+    constructor(private route: ActivatedRoute, private championService: ChampionService) {
     }
 
     ngOnInit() {

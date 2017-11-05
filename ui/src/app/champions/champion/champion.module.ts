@@ -1,32 +1,34 @@
 import { NgModule } from '@angular/core';
 import { SkillsComponent } from './skills/skills.component';
-import { BuildRoutingModule } from './build-routing.module';
+import { ChampionRoutingModule } from './champion-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { BuildComponent } from './build.component';
-import { BuildService } from './build.service';
+import { ChampionComponent } from './champion.component';
+import { ChampionService } from './champion.service';
 import { ItemsComponent } from './items/items.component';
 import { RunesComponent } from './runes/runes.component';
 import { MasteriesComponent } from './masteries/masteries.component';
 import { SummonerSpellsComponent } from './summoner-spells/summoner-spells.component';
 import { AlphabetComponent } from './alphabet/alphabet.component';
+import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
     imports: [
         BrowserModule,
-        BuildRoutingModule
+        ChampionRoutingModule
     ],
     declarations: [
-        BuildComponent,
+        ChampionComponent,
         AlphabetComponent,
         SkillsComponent,
         ItemsComponent,
         RunesComponent,
         MasteriesComponent,
-        SummonerSpellsComponent
+        SummonerSpellsComponent,
+        OverviewComponent
     ],
     providers: [
-        BuildService
+        ChampionService
     ]
 })
-export class BuildModule {
+export class ChampionModule {
 }

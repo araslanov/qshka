@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BuildsModule } from './builds/builds.module';
+import { ChampionsModule } from './champions/champions.module';
 import { PlayersModule } from './players/players.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
@@ -11,7 +11,7 @@ import { AboutComponent } from './about/about.component';
 @NgModule({
     imports: [
         BrowserModule,
-        BuildsModule,
+        ChampionsModule,
         PlayersModule,
         AppRoutingModule
     ],

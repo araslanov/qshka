@@ -2,23 +2,23 @@ import { NgModule } from '@angular/core';
 import { ListComponent } from './list/list.component';
 import { ListService } from './list/list.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { BuildsComponent } from './builds.component';
-import { BuildModule } from './build/build.module';
-import { BuildsRoutingModule } from './builds-routing.module';
+import { ChampionsComponent } from './champions.component';
+import { ChampionModule } from './champion/champion.module';
+import { ChampionsRoutingModule } from './champions-routing.module';
 
 @NgModule({
     imports: [
         BrowserModule,
-        BuildModule,
-        BuildsRoutingModule
+        ChampionModule,
+        ChampionsRoutingModule
     ],
     declarations: [
-        BuildsComponent,
+        ChampionsComponent,
         ListComponent
     ],
     providers: [
         ListService
     ]
 })
-export class BuildsModule {
+export class ChampionsModule {
 }

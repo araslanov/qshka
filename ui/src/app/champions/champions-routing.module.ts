@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BuildsComponent } from './builds.component';
+import { ChampionsComponent } from './champions.component';
 import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
     {
-        path: 'builds',
-        component: BuildsComponent,
+        path: 'champions',
+        component: ChampionsComponent,
         children: [
             {
                 path: '',
@@ -24,5 +24,5 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class BuildsRoutingModule {
+export class ChampionsRoutingModule {
 }
