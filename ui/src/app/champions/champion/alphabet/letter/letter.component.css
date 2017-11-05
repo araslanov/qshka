@@ -1,0 +1,26 @@
+.letter {
+    display: flex;
+    padding: 5px;
+    cursor: default;
+    color: #888;
+}
+
+.letter:hover {
+    background-color: #222;
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    background-color: #333;
+}
+
+.link {
+    display: flex;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+}
+
+.link:hover {
+    background: #222;
+}

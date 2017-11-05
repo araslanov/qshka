@@ -10,6 +10,7 @@ import { MasteriesComponent } from './masteries/masteries.component';
 import { SummonerSpellsComponent } from './summoner-spells/summoner-spells.component';
 import { AlphabetComponent } from './alphabet/alphabet.component';
 import { OverviewComponent } from './overview/overview.component';
+import { LetterComponent } from './alphabet/letter/letter.component';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { OverviewComponent } from './overview/overview.component';
         RunesComponent,
         MasteriesComponent,
         SummonerSpellsComponent,
-        OverviewComponent
+        OverviewComponent,
+        LetterComponent
     ],
     providers: [
         ChampionService
