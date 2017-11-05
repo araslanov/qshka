@@ -1,1 +1,1 @@
-# kushka
+# Qshka
