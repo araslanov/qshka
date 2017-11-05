@@ -1,6 +1,4 @@
-<span class="letter" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">A</span>
+<span class="letter" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">{{letter}}</span>
 <div class="menu" [hidden]="!menuVisible" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-    <a class="link" routerLink="../Aatrox">Aatrox</a>
-    <a class="link" routerLink="../Aatrox">Aatrox</a>
-    <a class="link" routerLink="../Aatrox">Aatrox</a>
+    <a *ngFor="let champion of champions" routerLink="../{{champion}}" routerLinkActive="active" class="link">{{champion}}</a>
 </div>

@@ -1,32 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ListService } from './list.service';
+import { ChampionService } from '../champion/champion.service';
 
 @Component({
     templateUrl: './list.component.html',
-    styleUrls: ['./list.component.css']
+    styleUrls: [ './list.component.css' ]
 })
 export class ListComponent implements OnInit {
-    private championEntries;
+    private championEntries: Array<any>;
 
-    constructor(private listService: ListService) {
+    constructor(private championService: ChampionService) {
     }
 
     ngOnInit() {
-        this.buildChampionMap(this.listService.getChampionList());
-    }
-
-    private buildChampionMap(championList: string[]) {
-        championList.sort();
-        const map = new Map();
-        for (const champion of championList) {
-            const letter = champion.substring(0, 1);
-            if (map.has(letter)) {
-                map.get(letter).push(champion);
-            } else {
-                map.set(letter, [champion]);
-            }
-        }
-        this.championEntries = map.entries();
+        this.championEntries = this.championService.getChampionEntries();
     }
 
 }

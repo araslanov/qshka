@@ -24,3 +24,7 @@
 .link:hover {
     background: #222;
 }
+
+.link.active {
+    background-color: red;
+}
