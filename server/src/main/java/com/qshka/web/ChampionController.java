@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 public class ChampionController {
-    @GetMapping
+    @GetMapping("/test")
     List<String> getChampionNames() {
         return Collections.singletonList("Aatrox");
     }
