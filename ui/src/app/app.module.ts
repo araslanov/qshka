@@ -7,10 +7,12 @@ import { ChampionsModule } from './champions/champions.module';
 import { PlayersModule } from './players/players.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
         BrowserModule,
+        HttpClientModule,
         ChampionsModule,
         PlayersModule,
         AppRoutingModule

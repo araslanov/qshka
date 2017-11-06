@@ -1,10 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { logging } from 'selenium-webdriver';
-import Entry = logging.Entry;
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
-export class ChampionService {
+export class ChampionService implements OnInit {
+    constructor(private http: HttpClient) {
+    }
+
+    ngOnInit() {
+        this.http.get('https://euw1.api.riotgames.com/lol/platform/v3/champions?freeToPlay=true')
+            .subscribe(data => {
+                console.log(data);
+            });
+    }
+
     getChampionList(): string[] {
         return [
             'Katarina', 'Malzahar', 'Nidalee', 'Jhin',
