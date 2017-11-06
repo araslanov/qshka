@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChampionService } from '../champion/champion.service';
+import { buildChampionAlphabet } from './list.util';
 
 @Component({
     templateUrl: './list.component.html',
@@ -12,7 +13,10 @@ export class ListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.championEntries = this.championService.getChampionEntries();
+        this.championService.getChampionList()
+            .subscribe(championList => {
+                this.championEntries = buildChampionAlphabet(championList);
+            });
     }
 
 }

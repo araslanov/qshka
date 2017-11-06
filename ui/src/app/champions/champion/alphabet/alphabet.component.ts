@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChampionService } from '../champion.service';
+import { buildChampionAlphabet } from '../../list/list.util';
 
 @Component({
     selector: 'app-alphabet',
@@ -13,8 +14,10 @@ export class AlphabetComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.championEntries = this.championService.getChampionEntries();
-        console.log('2');
+        this.championService.getChampionList()
+            .subscribe(championList => {
+                this.championEntries = buildChampionAlphabet(championList);
+            });
     }
 
 }
