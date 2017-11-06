@@ -7,14 +7,23 @@ export class ChampionService implements OnInit {
     constructor(private http: HttpClient) {
     }
 
-    ngOnInit() {
-        this.http.get('https://euw1.api.riotgames.com/lol/platform/v3/champions?freeToPlay=true')
+    callBackend() {
+        this.http.get('http://localhost:8080/api/test')
             .subscribe(data => {
                 console.log(data);
             });
     }
 
-    getChampionList(): string[] {
+    ngOnInit() {
+        this.http.get('https://euw1.api.riotgames.com/lol/platform/v3/champions?freeToPlay=true')
+            .subscribe(data => {
+                    console.log(data);
+                }
+            );
+    }
+
+    getChampionList(): string[ ] {
+        this.callBackend();
         return [
             'Katarina', 'Malzahar', 'Nidalee', 'Jhin',
             'Yorick', 'Karthus', 'Rengar', 'Akali',

@@ -14,3 +14,9 @@ repositories {
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
 }
+
+processResources {
+    from ('../ui/dist/') {
+        into 'static'
+    }
+}
