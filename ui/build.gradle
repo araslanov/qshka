@@ -1,0 +1,38 @@
+plugins {
+    id 'com.moowork.node' version '1.2.0'
+}
+
+task clean(type: Delete) {
+    group = 'build'
+    delete 'node_modules', 'dist'
+}
+
+task build {
+    group = 'build'
+
+    inputs.dir('src')
+    inputs.dir('node_modules')
+    inputs.files('angular-cli.json', 'package.json', 'tsconfig.json')
+    outputs.dir('build/dist')
+
+    doLast {
+        ngBuild.execute()
+    }
+}
+
+task ngBuild(type: NpmTask) {
+    dependsOn 'npmInstall'
+    args = ['run', 'build']
+}
+
+task test(type: NpmTask) {
+    group = 'verification'
+    dependsOn 'npmInstall'
+    args = ['run', 'test']
+}
+
+task testInteractive(type: NpmTask) {
+    dependsOn 'npmInstall'
+    args = ['run', 'testInteractive']
+    group = 'verification'
+}
