@@ -23,12 +23,15 @@ public class AllChampions {
         this.version = version;
     }
 
-    @Override
-    public String toString() {
-        return version;
+    public Map<String, Champion> getData() {
+        return data;
     }
 
-    class Champion {
+    public void setData(Map<String, Champion> data) {
+        this.data = data;
+    }
+
+    static class Champion {
         private String title;
         private int id;
         private String key;
