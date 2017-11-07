@@ -8,7 +8,7 @@ import { buildChampionAlphabet } from '../../list/list.util';
     styleUrls: [ './alphabet.component.less' ]
 })
 export class AlphabetComponent implements OnInit {
-    private championEntries: Array<any>;
+    championEntries: Array<any>;
 
     constructor(private championService: ChampionService) {
     }

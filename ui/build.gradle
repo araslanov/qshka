@@ -13,7 +13,7 @@ task build {
     inputs.dir('src')
     inputs.dir('node_modules')
     inputs.files('angular-cli.json', 'package.json', 'tsconfig.json')
-    outputs.dir('build/dist')
+    outputs.dir('dist')
 
     doLast {
         ngBuild.execute()
