@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     templateUrl: './skills.component.html',
-    styleUrls: [ './skills.component.css' ]
+    styleUrls: [ './skills.component.less' ]
 })
 export class SkillsComponent implements OnInit {
 

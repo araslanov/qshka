@@ -5,7 +5,7 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
     templateUrl: './champion.component.html',
-    styleUrls: [ './champion.component.css' ]
+    styleUrls: [ './champion.component.less' ]
 })
 export class ChampionComponent implements OnInit {
     championName: string;

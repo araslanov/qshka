@@ -4,7 +4,7 @@ import { buildChampionAlphabet } from './list.util';
 
 @Component({
     templateUrl: './list.component.html',
-    styleUrls: [ './list.component.css' ]
+    styleUrls: [ './list.component.less' ]
 })
 export class ListComponent implements OnInit {
     private championEntries: Array<any>;
