@@ -8,6 +8,8 @@ import { PlayersModule } from './players/players.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StatusComponent } from './status/status.component';
+import { StatusService } from './status/status.service';
 
 @NgModule({
     imports: [
@@ -21,7 +23,11 @@ import { HttpClientModule } from '@angular/common/http';
         AppComponent,
         HeaderComponent,
         PageNotFoundComponent,
-        AboutComponent
+        AboutComponent,
+        StatusComponent
+    ],
+    providers: [
+        StatusService
     ],
     bootstrap: [
         AppComponent
