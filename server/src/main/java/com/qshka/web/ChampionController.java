@@ -34,7 +34,7 @@ public class ChampionController {
                 new ParameterizedTypeReference<AllChampions>() {});
 
         AllChampions allChampions = allChampionsResponseEntity.getBody();
-        List<String> result = allChampions.getData().values().stream().map(champion -> champion.getName()).collect
+        List<String> result = allChampions.getData().values().stream().map(AllChampions.Champion::getName).collect
                 (Collectors.toList());
 
         return result;
