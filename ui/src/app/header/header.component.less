@@ -1,9 +1,11 @@
+@import "../../assets/css/dark-theme";
+
 #header {
+    background-color: @content-background;
     display: flex;
     align-items: center;
     height: 50px;
     margin-bottom: 10px;
-    background-color: #333;
 }
 
 #title {
@@ -12,7 +14,7 @@
 }
 
 .active {
-    background-color: black;
+    background-color: @page-background;
 }
 
 nav {
@@ -31,7 +33,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #222;
+    background-color: @highlight-background;
 }
 
 .float-right {
