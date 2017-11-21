@@ -1,15 +1,28 @@
 @import "../../../assets/css/dark-theme";
 
-.tile {
-    display: inline-block;
-    background-color: @tile-background;
-    padding: 5px;
-    margin: 5px;
-}
-
 #content {
     background-color: @content-background;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+}
+
+.tile {
+    display: inline-block;
+    margin: 5px;
+}
+
+.letter {
+    font-size: x-large;
+    padding: 2px 5px 0 5px;
+}
+
+.link {
+    display: flex;
+    padding: 2px 5px 2px 5px;
+}
+
+.link:hover {
+    color: @content-background;
+    background-color: @text-color;
 }

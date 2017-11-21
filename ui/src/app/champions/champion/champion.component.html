@@ -1,7 +1,9 @@
 <app-alphabet></app-alphabet>
-<img src="../../../assets/images/champions/{{championName}}/icon.png" width="50" height="50">
-<span>{{championName}}</span>
-<div class="tabs">
+<div id="title">
+    <img src="../../../assets/images/champions/{{championName}}/icon.png" width="50" height="50">
+    <span id="name">{{championName}}</span>
+</div>
+<div id="tabs">
     <a routerLink="overview" routerLinkActive="active">Overview</a>
     <a routerLink="runes" routerLinkActive="active">Runes</a>
     <a routerLink="masteries" routerLinkActive="active">Masteries</a>
